@@ -1,15 +1,20 @@
 #include "head.h"
-
+/**
+ * execute - compares the strings to see if they are built-ins
+ * @args: arguments the user entered
+ * Return: returns value of shell_start
+ **/
 int execute(char **args)
 {
 	int i;
+
 	char *SHELL_strings[] = {"cd", "help", "exit" };
+
 	int (*SHELL_functions[]) (char **) = {&shell_cd, &shell_help, &shell_exit};
-	
+
 	if (args[0] == NULL)
 	{
-		// An empty command was entered.
-		return 1;
+		return (1);
 	}
 
 	for (i = 0; i < num_funcs(); i++)

@@ -1,5 +1,9 @@
 #include "head.h"
-
+/**
+ * tok - tokenizes user input
+ * @str: Users input
+ * Return: tokanized input
+**/
 char **tok(char *str)
 {
 	int buffsize = 64;
@@ -13,7 +17,7 @@ char **tok(char *str)
 		exit(EXIT_FAILURE);
 	}
 
-	token = strtok (str, sDELIM);
+	token = strtok(str, sDELIM);
 	while (token != NULL)
 	{
 		toks[count] = token;
@@ -22,7 +26,7 @@ char **tok(char *str)
 		if (count >= buffsize)
 		{
 			buffsize += 64;
-			toks = realloc(toks, buffsize * sizeof (char *));
+			toks = realloc(toks, buffsize * sizeof(char *));
 			if (toks == NULL)
 			{
 				exit(EXIT_FAILURE);
@@ -31,5 +35,5 @@ char **tok(char *str)
 		token = strtok(NULL, sDELIM);
 	}
 	toks[count] = '\0';
-	return (toks);	
+	return (toks);
 }
