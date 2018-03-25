@@ -10,7 +10,7 @@ void sloop(void)
 	int x;
 
 	do{
-		printf("$ ");
+		write(STDOUT_FILENO, "$ ", 3);
 		line = sread();
 		args = tok(line);
 		x = execute(args);

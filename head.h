@@ -1,7 +1,7 @@
 #ifndef HEAD_H
 #define HEAD_H
 /* MACROS */
-#define sDELIM "\t\r\n\a"
+#define sDELIM " \t\r\n\a"
 /* END MACROS */
 
 /* HEADERS */
