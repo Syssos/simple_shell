@@ -1,6 +1,6 @@
 #include "head.h"
 /**
- *
+ * sread - reads user input
  *
  *
  */
