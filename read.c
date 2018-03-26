@@ -11,6 +11,7 @@ char *sread(void)
 	size_t bufsize = 0;
 	int cntrd = 0;
 
+	signal(SIGINT, sighandle);
 	cntrd = getline(&input, &bufsize, stdin);
 
 	if (cntrd == EOF)
@@ -19,5 +20,6 @@ char *sread(void)
 		free (input);
 		exit(EXIT_SUCCESS);
 	}
+
 	return (input);
 }
