@@ -18,7 +18,7 @@ int shell_cd(char **args)
 {
 	if (args[1] == NULL)
 	{
-		printf("Error 3\n");
+		write(1, "Error 3\n", 12);
 		return (EXIT_FAILURE);
 	}
 	else
@@ -45,15 +45,15 @@ int shell_help(char **args)
 	{
 		perror("Error 5\n");
 	}
-	printf("To use shell:\n");
-	printf("Type program names and arguments, then hit enter.\n");
-	printf("The following are built into this shell:\n");
+	write(1, "To use shell:\n", 18);
+	write(1, "Type program names and arguments, then hit enter.\n", 54);
+	write(1, "The following are built into this shell:\n", 46);
 
 	for (i = 0; i < num_funcs(); i++)
 	{
 		printf("  %s\n", SHELL_strings[i]);
 	}
-	printf("Read the man page for information.\n");
+	write(1, "Read the man page for information.\n", 50);
 	return (1);
 }
 /**
@@ -63,9 +63,11 @@ int shell_help(char **args)
  **/
 int shell_exit(char **args)
 {
+
 	if (args[0] == NULL)
 	{
 		perror("Error 5\n");
 	}
+
 	return (0);
 }
