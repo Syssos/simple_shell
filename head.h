@@ -19,6 +19,7 @@ int shell_help(char **args);
 int shell_exit(char **args);
 int execute(char **args);
 int num_funcs(void);
+void sighandle(int signal);
 /* END SHELL FUNCTIONS */
 
 /* HELPER FUNCTIONS */
