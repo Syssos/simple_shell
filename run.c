@@ -8,9 +8,9 @@ int execute(char **args)
 {
 	int i;
 
-	char *SHELL_strings[] = {"cd", "help", "exit" };
+	char *SHELL_strings[] = {"cd", "help", "exit", "env"};
 
-	int (*SHELL_functions[]) (char **) = {&shell_cd, &shell_help, &shell_exit};
+	int (*SHELL_functions[]) (char **) = {&shell_cd, &shell_help, &shell_exit, &_env};
 
 	if (args[0] == NULL)
 	{

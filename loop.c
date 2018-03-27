@@ -12,7 +12,11 @@ void sloop(void)
 	do{
 		write(STDOUT_FILENO, "$ ", 3);
 		line = sread();
+		if (line == NULL)
+			return;
 		args = tok(line);
+		if (args == NULL)
+			return;
 		x = execute(args);
 
 		free(line);

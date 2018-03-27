@@ -9,3 +9,11 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+int _strlen(char *str)
+{
+	int s;
+	while (str[s] != '\0')
+		s++;
+	return (s);
+}

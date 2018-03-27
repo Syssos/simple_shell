@@ -21,9 +21,12 @@ int execute(char **args);
 int num_funcs(void);
 /* END SHELL FUNCTIONS */
 
-/* FUNCTIONS */
+/* HELPER FUNCTIONS */
 void sloop(void);
 char *sread(void);
 char **tok(char *str);
-/* END FUNCTIONS */
+int _putchar(char c);
+int _strlen(char *str);
+int _env(char **args);
+/* END HELPER FUNCTIONS */
 #endif
