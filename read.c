@@ -6,7 +6,7 @@
 char *sread(void)
 {
 
-	char *input;
+	char *input = NULL;
 	size_t bufsize = 0;
 	int cntrd = 0;
 
@@ -15,7 +15,9 @@ char *sread(void)
 
 	if (cntrd == EOF)
 	{
-		_putchar('\n');
+		if (isatty(STDIN_FILENO) == 1)
+			_putchar('\n');
+
 		free(input);
 		exit(EXIT_SUCCESS);
 	}

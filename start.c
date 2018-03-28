@@ -14,13 +14,13 @@ int shell_start(char **args)
 	{
 		if (execve(args[0], args, NULL) == -1)
 		{
-			perror("Error");
+			perror("./hsh");
 		}
 		exit(EXIT_FAILURE);
 	}
 	else if (pid < 0)
 	{
-		perror("Error 2\n");
+		perror("./hsh");
 	}
 	else
 	{
