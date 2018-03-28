@@ -31,11 +31,11 @@ int shell_cd(char **args)
 	return (1);
 }
 /**
- * shell_help - help for user
+ * _help - help for user
  * @args: user input
  * Return: 1 if successful
  **/
-int shell_help(char **args)
+int _help(char **args)
 {
 	int i;
 
@@ -69,22 +69,24 @@ int shell_exit(char **args)
 	}
 	return (0);
 }
-
+/**
+ * _env - gets environment
+ * @args: user input
+ * Return: 0 on success
+ **/
 int _env(char **args)
 {
 	int i = 0;
 	int j;
 
-	extern char **environ;
-        
-	while(environ[i])
+	while (environ[i])
 	{
 		j = 0;
 		while (environ[i][j] !=  '\0')
 		{
 			_putchar(environ[i][j]);
 			j++;
-		}		
+		}
 		_putchar('\n');
 		i++;
 	}

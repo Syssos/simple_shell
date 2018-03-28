@@ -1,9 +1,9 @@
 #include "head.h"
 /**
 * main - A simple shell
-*
+* Return: o if successful
 */
-int main()
+int main(void)
 {
 	sloop();
 

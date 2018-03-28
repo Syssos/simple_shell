@@ -9,8 +9,12 @@ void sloop(void)
 	char **args;
 	int x;
 
-	do{
-		write(STDOUT_FILENO, "$ ", 3);
+	do {
+		if (isatty(STDIN_FILENO) == 1)
+		{
+			write(STDOUT_FILENO, "$ ", 3);
+		}
+
 		line = sread();
 		if (line == NULL)
 			return;
@@ -21,5 +25,5 @@ void sloop(void)
 
 		free(line);
 		free(args);
-	}while (x);
+	} while (x);
 }

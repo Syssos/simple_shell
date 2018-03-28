@@ -1,8 +1,7 @@
 #include "head.h"
 /**
  * sread - reads user input
- *
- *
+ * Return: user iput in a buffer
  */
 char *sread(void)
 {
@@ -17,7 +16,7 @@ char *sread(void)
 	if (cntrd == EOF)
 	{
 		_putchar('\n');
-		free (input);
+		free(input);
 		exit(EXIT_SUCCESS);
 	}
 
