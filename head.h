@@ -4,6 +4,8 @@
 #define sDELIM " \t\r\n\a"
 /* END MACROS */
 
+extern char **environ;
+
 /* HEADERS */
 #include <sys/wait.h>
 #include <unistd.h>
@@ -15,7 +17,7 @@
 /* SHELL FUNCTIONS */
 int shell_start(char **args);
 int shell_cd(char **args);
-int shell_help(char **args);
+int _help(char **args);
 int shell_exit(char **args);
 int execute(char **args);
 int num_funcs(void);
