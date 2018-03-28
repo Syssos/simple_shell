@@ -1,0 +1,30 @@
+.\" Manpage for SHELL.
+.TH HSH(1)  "28 March 2018" "1.0" "SHELL man page"
+.SH NAME
+	HSH - Holberton Simple SHell
+.SH SYNOPSIS
+	HSH [options] [file]
+.SH DESCRIPTION
+	HSH is  an sh-compatible command language interpreter that executes
+ commands read from the standard input or from a file.
+.SH ARGUMENTS
+	N/A
+.SH EXIT STATUS
+    	 For the shell's purposes, a command which exits with a zero exit status
+has succeeded. An exit status of zero indicates success. A non-zero exit status
+indicates failure.
+.SH Word Splitting
+    	 The shell treats each character of IFS as a delimiter,
+and splits the results of the other  expansions  into words on these characters.
+.SH COMMAND EXECUTION
+    	    After a command has been split into words, if it results in a
+simple command and an optional list of arguments, the following actions
+are taken.
+.SH ENVIRONMENT
+	When  a  program  is invoked it is given an array of strings called the
+environment.
+.SH BUGS
+
+.SH AUTHORS
+Cody Paral
+Dusan Semien
