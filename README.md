@@ -49,7 +49,7 @@ Write a simple UNIX command interpreter.
 
 ## Testing
 Interactive
-![](https://imgur.com/a/Wb4of.png)
+![](https://i.imgur.com/xQwBVBI.jpg)
 
 Non-interactive
 ![](https://i.imgur.com/bQi7Txi.jpg)
