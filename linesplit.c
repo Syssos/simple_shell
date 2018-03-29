@@ -6,7 +6,7 @@
 **/
 char **tok(char *str)
 {
-	int buffsize = 64;
+	int buffsize = 128;
 	int count = 0;
 	char **toks;
 	char *token;
@@ -23,15 +23,6 @@ char **tok(char *str)
 		toks[count] = token;
 		count++;
 
-		if (count >= buffsize)
-		{
-			buffsize += 64;
-			toks = realloc(toks, buffsize * sizeof(char *));
-			if (toks == NULL)
-			{
-				exit(EXIT_FAILURE);
-			}
-		}
 		token = strtok(NULL, sDELIM);
 	}
 	/* toks[count] = '\0'; */
