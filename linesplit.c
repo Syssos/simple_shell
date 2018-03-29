@@ -25,6 +25,6 @@ char **tok(char *str)
 
 		token = strtok(NULL, sDELIM);
 	}
-	/* toks[count] = '\0'; */
+	toks[count] = NULL;
 	return (toks);
 }

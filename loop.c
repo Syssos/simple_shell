@@ -22,7 +22,6 @@ void sloop(void)
 		if (args == NULL)
 			return;
 		x = execute(args);
-
 		free(line);
 		free(args);
 	} while (x);

@@ -12,6 +12,7 @@ int shell_start(char **args)
 	pid = fork();
 	if (pid == 0)
 	{
+		printf("%s", args[0]);
 		if (execve(args[0], args, NULL) == -1)
 		{
 			perror("./hsh");
