@@ -79,6 +79,8 @@ int _env(char **args)
 	int i = 0;
 	int j;
 
+	if (args[0] == NULL)
+		return (0);
 	while (environ[i])
 	{
 		j = 0;
@@ -90,7 +92,5 @@ int _env(char **args)
 		_putchar('\n');
 		i++;
 	}
-	if (args == NULL)
-		return (0);
-	exit(0);
+	return (1);
 }
