@@ -52,4 +52,4 @@ Interactive
 ![](https://imgur.com/a/Wb4of.png)
 
 Non-interactive
-![]([Imgur](https://i.imgur.com/bQi7Txi.jpg[/img])
+![](https://i.imgur.com/bQi7Txi.jpg)
